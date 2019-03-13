@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditReferenciaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditReferenciaLabel_idreferencia}" for="idreferencia" />
+                    <h:inputText id="idreferencia" value="#{referenciaController.selected.idreferencia}" title="#{bundle.EditReferenciaTitle_idreferencia}" required="true" requiredMessage="#{bundle.EditReferenciaRequiredMessage_idreferencia}"/>
+                    <h:outputLabel value="#{bundle.EditReferenciaLabel_nombreReferencia}" for="nombreReferencia" />
+                    <h:inputText id="nombreReferencia" value="#{referenciaController.selected.nombreReferencia}" title="#{bundle.EditReferenciaTitle_nombreReferencia}" required="true" requiredMessage="#{bundle.EditReferenciaRequiredMessage_nombreReferencia}"/>
+                    <h:outputLabel value="#{bundle.EditReferenciaLabel_idmarca}" for="idmarca" />
+                    <h:selectOneMenu id="idmarca" value="#{referenciaController.selected.idmarca}" title="#{bundle.EditReferenciaTitle_idmarca}" required="true" requiredMessage="#{bundle.EditReferenciaRequiredMessage_idmarca}">
+                        <f:selectItems value="#{marcaController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{referenciaController.update}" value="#{bundle.EditReferenciaSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditReferenciaViewLink}"/>
+                <br />
+                <h:commandLink action="#{referenciaController.prepareList}" value="#{bundle.EditReferenciaShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditReferenciaIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
