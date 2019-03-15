@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewDetallesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewDetallesLabel_idDetalles}"/>
+                    <h:outputText value="#{detallesController.selected.idDetalles}" title="#{bundle.ViewDetallesTitle_idDetalles}"/>
+                    <h:outputText value="#{bundle.ViewDetallesLabel_ram}"/>
+                    <h:outputText value="#{detallesController.selected.ram}" title="#{bundle.ViewDetallesTitle_ram}"/>
+                    <h:outputText value="#{bundle.ViewDetallesLabel_resolucionCamara}"/>
+                    <h:outputText value="#{detallesController.selected.resolucionCamara}" title="#{bundle.ViewDetallesTitle_resolucionCamara}"/>
+                    <h:outputText value="#{bundle.ViewDetallesLabel_capacidadBateria}"/>
+                    <h:outputText value="#{detallesController.selected.capacidadBateria}" title="#{bundle.ViewDetallesTitle_capacidadBateria}"/>
+                    <h:outputText value="#{bundle.ViewDetallesLabel_capacidadAlmacenamiento}"/>
+                    <h:outputText value="#{detallesController.selected.capacidadAlmacenamiento}" title="#{bundle.ViewDetallesTitle_capacidadAlmacenamiento}"/>
+                    <h:outputText value="#{bundle.ViewDetallesLabel_idreferencia}"/>
+                    <h:outputText value="#{detallesController.selected.idreferencia}" title="#{bundle.ViewDetallesTitle_idreferencia}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{detallesController.destroyAndView}" value="#{bundle.ViewDetallesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewDetallesEditLink}"/>
+                <br />
+                <h:commandLink action="#{detallesController.prepareCreate}" value="#{bundle.ViewDetallesCreateLink}" />
+                <br />
+                <h:commandLink action="#{detallesController.prepareList}" value="#{bundle.ViewDetallesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewDetallesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

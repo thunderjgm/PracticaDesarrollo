@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditDetallesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditDetallesLabel_idDetalles}" for="idDetalles" />
+                    <h:inputText id="idDetalles" value="#{detallesController.selected.idDetalles}" title="#{bundle.EditDetallesTitle_idDetalles}" required="true" requiredMessage="#{bundle.EditDetallesRequiredMessage_idDetalles}"/>
+                    <h:outputLabel value="#{bundle.EditDetallesLabel_ram}" for="ram" />
+                    <h:inputText id="ram" value="#{detallesController.selected.ram}" title="#{bundle.EditDetallesTitle_ram}" required="true" requiredMessage="#{bundle.EditDetallesRequiredMessage_ram}"/>
+                    <h:outputLabel value="#{bundle.EditDetallesLabel_resolucionCamara}" for="resolucionCamara" />
+                    <h:inputText id="resolucionCamara" value="#{detallesController.selected.resolucionCamara}" title="#{bundle.EditDetallesTitle_resolucionCamara}" required="true" requiredMessage="#{bundle.EditDetallesRequiredMessage_resolucionCamara}"/>
+                    <h:outputLabel value="#{bundle.EditDetallesLabel_capacidadBateria}" for="capacidadBateria" />
+                    <h:inputText id="capacidadBateria" value="#{detallesController.selected.capacidadBateria}" title="#{bundle.EditDetallesTitle_capacidadBateria}" required="true" requiredMessage="#{bundle.EditDetallesRequiredMessage_capacidadBateria}"/>
+                    <h:outputLabel value="#{bundle.EditDetallesLabel_capacidadAlmacenamiento}" for="capacidadAlmacenamiento" />
+                    <h:inputText id="capacidadAlmacenamiento" value="#{detallesController.selected.capacidadAlmacenamiento}" title="#{bundle.EditDetallesTitle_capacidadAlmacenamiento}" required="true" requiredMessage="#{bundle.EditDetallesRequiredMessage_capacidadAlmacenamiento}"/>
+                    <h:outputLabel value="#{bundle.EditDetallesLabel_idreferencia}" for="idreferencia" />
+                    <h:selectOneMenu id="idreferencia" value="#{detallesController.selected.idreferencia}" title="#{bundle.EditDetallesTitle_idreferencia}" required="true" requiredMessage="#{bundle.EditDetallesRequiredMessage_idreferencia}">
+                        <f:selectItems value="#{referenciaController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{detallesController.update}" value="#{bundle.EditDetallesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditDetallesViewLink}"/>
+                <br />
+                <h:commandLink action="#{detallesController.prepareList}" value="#{bundle.EditDetallesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditDetallesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

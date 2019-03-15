@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateReferenciaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateReferenciaLabel_idreferencia}" for="idreferencia" />
+                    <h:inputText id="idreferencia" value="#{referenciaController.selected.idreferencia}" title="#{bundle.CreateReferenciaTitle_idreferencia}" required="true" requiredMessage="#{bundle.CreateReferenciaRequiredMessage_idreferencia}"/>
+                    <h:outputLabel value="#{bundle.CreateReferenciaLabel_nombreReferencia}" for="nombreReferencia" />
+                    <h:inputText id="nombreReferencia" value="#{referenciaController.selected.nombreReferencia}" title="#{bundle.CreateReferenciaTitle_nombreReferencia}" required="true" requiredMessage="#{bundle.CreateReferenciaRequiredMessage_nombreReferencia}"/>
+                    <h:outputLabel value="#{bundle.CreateReferenciaLabel_idmarca}" for="idmarca" />
+                    <h:selectOneMenu id="idmarca" value="#{referenciaController.selected.idmarca}" title="#{bundle.CreateReferenciaTitle_idmarca}" required="true" requiredMessage="#{bundle.CreateReferenciaRequiredMessage_idmarca}">
+                        <f:selectItems value="#{marcaController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{referenciaController.create}" value="#{bundle.CreateReferenciaSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{referenciaController.prepareList}" value="#{bundle.CreateReferenciaShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateReferenciaIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
