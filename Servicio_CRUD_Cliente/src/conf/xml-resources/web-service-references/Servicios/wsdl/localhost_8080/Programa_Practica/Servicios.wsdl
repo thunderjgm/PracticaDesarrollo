@@ -5,11 +5,11 @@
 <xsd:import namespace="http://WebService/" schemaLocation="http://localhost:8080/Programa_Practica/Servicios?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="Agregar">
-<part name="parameters" element="tns:Agregar"/>
+<message name="agregar">
+<part name="parameters" element="tns:agregar"/>
 </message>
-<message name="AgregarResponse">
-<part name="parameters" element="tns:AgregarResponse"/>
+<message name="agregarResponse">
+<part name="parameters" element="tns:agregarResponse"/>
 </message>
 <message name="Listar">
 <part name="parameters" element="tns:Listar"/>
@@ -17,20 +17,50 @@
 <message name="ListarResponse">
 <part name="parameters" element="tns:ListarResponse"/>
 </message>
+<message name="listarID">
+<part name="parameters" element="tns:listarID"/>
+</message>
+<message name="listarIDResponse">
+<part name="parameters" element="tns:listarIDResponse"/>
+</message>
+<message name="Eliminar">
+<part name="parameters" element="tns:Eliminar"/>
+</message>
+<message name="EliminarResponse">
+<part name="parameters" element="tns:EliminarResponse"/>
+</message>
+<message name="Actualizar">
+<part name="parameters" element="tns:Actualizar"/>
+</message>
+<message name="ActualizarResponse">
+<part name="parameters" element="tns:ActualizarResponse"/>
+</message>
 <portType name="Servicios">
-<operation name="Agregar">
-<input wsam:Action="http://WebService/Servicios/AgregarRequest" message="tns:Agregar"/>
-<output wsam:Action="http://WebService/Servicios/AgregarResponse" message="tns:AgregarResponse"/>
+<operation name="agregar">
+<input wsam:Action="http://WebService/Servicios/agregarRequest" message="tns:agregar"/>
+<output wsam:Action="http://WebService/Servicios/agregarResponse" message="tns:agregarResponse"/>
 </operation>
 <operation name="Listar">
 <input wsam:Action="http://WebService/Servicios/ListarRequest" message="tns:Listar"/>
 <output wsam:Action="http://WebService/Servicios/ListarResponse" message="tns:ListarResponse"/>
 </operation>
+<operation name="listarID">
+<input wsam:Action="http://WebService/Servicios/listarIDRequest" message="tns:listarID"/>
+<output wsam:Action="http://WebService/Servicios/listarIDResponse" message="tns:listarIDResponse"/>
+</operation>
+<operation name="Eliminar">
+<input wsam:Action="http://WebService/Servicios/EliminarRequest" message="tns:Eliminar"/>
+<output wsam:Action="http://WebService/Servicios/EliminarResponse" message="tns:EliminarResponse"/>
+</operation>
+<operation name="Actualizar">
+<input wsam:Action="http://WebService/Servicios/ActualizarRequest" message="tns:Actualizar"/>
+<output wsam:Action="http://WebService/Servicios/ActualizarResponse" message="tns:ActualizarResponse"/>
+</operation>
 </portType>
 <binding name="ServiciosPortBinding" type="tns:Servicios">
 <wsp:PolicyReference URI="#ServiciosPortBindingPolicy"/>
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="Agregar">
+<operation name="agregar">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -40,6 +70,33 @@
 </output>
 </operation>
 <operation name="Listar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarID">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Eliminar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Actualizar">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

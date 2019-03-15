@@ -20,7 +20,7 @@
         <div class="container mt-4">
             <div class="card">
                 <div class="card-header">
-                    <a href="Controlador?accion=add" class="btn btn-primary">Nuevo usuario</a>
+                    <a href="Controlador?accion=add" class="btn btn-success">Nuevo usuario</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-hover">
@@ -43,8 +43,8 @@
                             <td><%= u.getUser()%></td>
                             <td><%= u.getPassword()%></td>
                             <td>
-                                <a href="" class="btn btn-primary">Edit</a>
-                                <a href="" class="btn btn-danger">Delete</a>
+                                <a href="Controlador?accion=editar&id=<%=u.getIDUser()%>" class="btn btn-primary">Edit</a>
+                                <a href="Controlador?accion=eliminar&id=<%=u.getIDUser()%>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                         <%}%>

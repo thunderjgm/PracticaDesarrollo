@@ -5,6 +5,8 @@
  */
 package Modelo;
 
+import webservice.User;
+
 public class UserService {
 
     public UserService(){
@@ -17,10 +19,28 @@ public class UserService {
         return port.listar();
     }
 
-    public  String agregar(java.lang.String usuario, java.lang.String contraseña) {
+    public String agregar(java.lang.String usuario, java.lang.String contraseña) {
         webservice.Servicios_Service service = new webservice.Servicios_Service();
         webservice.Servicios port = service.getServiciosPort();
         return port.agregar(usuario, contraseña);
+    }
+
+    public User eliminar(int id) {
+        webservice.Servicios_Service service = new webservice.Servicios_Service();
+        webservice.Servicios port = service.getServiciosPort();
+        return port.eliminar(id);
+    }
+
+    public String actualizar(int id, java.lang.String user, java.lang.String password) {
+        webservice.Servicios_Service service = new webservice.Servicios_Service();
+        webservice.Servicios port = service.getServiciosPort();
+        return port.actualizar(id, user, password);
+    }
+
+    public User listarID(int id) {
+        webservice.Servicios_Service service = new webservice.Servicios_Service();
+        webservice.Servicios port = service.getServiciosPort();
+        return port.listarID(id);
     }
     
     

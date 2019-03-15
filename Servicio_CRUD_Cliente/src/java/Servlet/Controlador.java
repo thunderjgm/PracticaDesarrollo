@@ -27,13 +27,33 @@ public class Controlador extends HttpServlet {
         if(accion.equals("add")){
             acceso=add;
         }
+        else if(accion.equals("eliminar")){
+            int id=Integer.parseInt(request.getParameter("id"));
+            user.eliminar(id);
+            acceso=index;
+        }
         else if(accion.equals("Guardar")){
             String User=request.getParameter("txtuser");
             String Password=request.getParameter("txtpassword");
             user.agregar(User, Password);
             acceso=index;
         }
-       RequestDispatcher dispatcher=request.getRequestDispatcher(accion);
+        else if(accion.endsWith("editar")){
+            acceso=edit;
+            request.setAttribute("iduser", request.getParameter("id"));
+        }
+        else if(accion.equals("Actualizar")){
+            String User=request.getParameter("txtuser");
+            String Password=request.getParameter("txtpassword");
+            int id=Integer.parseInt(request.getParameter("txtid"));
+            user.actualizar(id, User, Password);
+            acceso=index;
+        }
+        else{
+            acceso=index;
+        }
+        
+       RequestDispatcher dispatcher=request.getRequestDispatcher(acceso);
        dispatcher.forward(request, response);
     }
 

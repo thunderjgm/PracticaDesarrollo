@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para agregarResponse complex type.
+ * <p>Clase Java para listarIDResponse complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="agregarResponse"&gt;
+ * &lt;complexType name="listarIDResponse"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="return" type="{http://WebService/}user" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -27,23 +27,23 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "agregarResponse", propOrder = {
+@XmlType(name = "listarIDResponse", propOrder = {
     "_return"
 })
-public class AgregarResponse {
+public class ListarIDResponse {
 
     @XmlElement(name = "return")
-    protected String _return;
+    protected User _return;
 
     /**
      * Obtiene el valor de la propiedad return.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link User }
      *     
      */
-    public String getReturn() {
+    public User getReturn() {
         return _return;
     }
 
@@ -52,10 +52,10 @@ public class AgregarResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link User }
      *     
      */
-    public void setReturn(String value) {
+    public void setReturn(User value) {
         this._return = value;
     }
 
