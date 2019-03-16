@@ -19,6 +19,7 @@ public class UserDAO implements CRUD{
     Conexion conex=new Conexion();
     int res;
     String msj;
+    boolean estado;
     User user= new User();
     
     @Override
@@ -108,6 +109,33 @@ public class UserDAO implements CRUD{
            }catch (Exception e){
         }
         return user;
+    }
+
+    @Override
+    public boolean ingresar(String user, String contraseña) {
+        String sql="select * from login where user = ? and password = ?";
+        try{
+           con=conex.getConnection();
+           ps=con.prepareStatement(sql);
+           ps.setString(1, user);
+           ps.setString(2, contraseña);
+           rs=ps.executeQuery();
+           if(rs.absolute(1)){
+               estado=true;
+           }else{
+               estado=false;
+           }
+        }catch (Exception e){
+        }
+//        finally{
+//            try {
+//                if(conex.getConnection()!=null) conex.getConnection().close();
+//                if(ps != null) ps.close();
+//                if(rs !=null) rs.close();
+//            } catch (Exception e) {
+//            }
+//        }
+        return estado;
     }
     
     

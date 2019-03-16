@@ -52,5 +52,14 @@ public class Servicios {
         return user;
     }
 
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "Ingresar")
+    public boolean Ingresar(@WebParam(name = "user") String user, @WebParam(name = "password") String password) {
+        boolean datos= dao.ingresar(user, password);
+        return datos;
+    }
+
 
 }
