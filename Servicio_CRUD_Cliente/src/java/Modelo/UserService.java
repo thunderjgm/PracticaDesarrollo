@@ -42,6 +42,12 @@ public class UserService {
         webservice.Servicios port = service.getServiciosPort();
         return port.listarID(id);
     }
+
+    public boolean ingresar(java.lang.String user, java.lang.String password) {
+        webservice.Servicios_Service service = new webservice.Servicios_Service();
+        webservice.Servicios port = service.getServiciosPort();
+        return port.ingresar(user, password);
+    }
     
     
     

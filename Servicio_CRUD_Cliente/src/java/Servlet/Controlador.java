@@ -9,12 +9,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class Controlador extends HttpServlet {
 
         String add = "add.jsp";
         String edit="edit.jsp";
         String index="index.jsp";
+        String entra="menu.jsp";
+        String noroot="index_user.jsp";
+        String login="validacion.jsp";
         String acceso="";
     
         UserService user=new UserService();
@@ -36,7 +40,7 @@ public class Controlador extends HttpServlet {
             String User=request.getParameter("txtuser");
             String Password=request.getParameter("txtpassword");
             user.agregar(User, Password);
-            acceso=index;
+            acceso=login;
         }
         else if(accion.endsWith("editar")){
             acceso=edit;
@@ -49,9 +53,26 @@ public class Controlador extends HttpServlet {
             user.actualizar(id, User, Password);
             acceso=index;
         }
-        else{
-            acceso=index;
+        else if(accion.equals("Ingresar")){
+            String User=request.getParameter("txtuser");
+            String Password=request.getParameter("txtpassword");
+            
+            if(user.ingresar(User, Password)){
+                
+                HttpSession objsesion = request.getSession(true);
+                objsesion.setAttribute("User", User);
+                if(User.equals("root") && Password.equals("root")){
+                    acceso=index;
+                }else{
+                    acceso=noroot;
+                }
+                
+                
+            }else{
+                acceso=login;
+            }
         }
+        
         
        RequestDispatcher dispatcher=request.getRequestDispatcher(acceso);
        dispatcher.forward(request, response);

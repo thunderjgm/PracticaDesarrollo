@@ -8,6 +8,10 @@
 
 <xs:element name="EliminarResponse" type="tns:EliminarResponse"/>
 
+<xs:element name="Ingresar" type="tns:Ingresar"/>
+
+<xs:element name="IngresarResponse" type="tns:IngresarResponse"/>
+
 <xs:element name="Listar" type="tns:Listar"/>
 
 <xs:element name="ListarResponse" type="tns:ListarResponse"/>
@@ -86,6 +90,19 @@
 <xs:complexType name="listarIDResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Ingresar">
+<xs:sequence>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IngresarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

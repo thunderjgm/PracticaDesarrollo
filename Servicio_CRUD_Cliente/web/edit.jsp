@@ -34,7 +34,7 @@
                         <label>Contraseña</label>
                             <input type="password" name="txtpassword" class="form-control" value="<%=u.getPassword() %>">
                             <input type="submit" name="accion" value="Actualizar" class="btn btn-success">
-                            <a href="Controlador?accion=index">Regresar</a>   
+                            <a href="index.html">Regresar</a>   
                     </form>
                 </div>
             </div>

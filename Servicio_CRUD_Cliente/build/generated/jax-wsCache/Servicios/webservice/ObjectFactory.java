@@ -28,6 +28,8 @@ public class ObjectFactory {
     private final static QName _ActualizarResponse_QNAME = new QName("http://WebService/", "ActualizarResponse");
     private final static QName _Eliminar_QNAME = new QName("http://WebService/", "Eliminar");
     private final static QName _EliminarResponse_QNAME = new QName("http://WebService/", "EliminarResponse");
+    private final static QName _Ingresar_QNAME = new QName("http://WebService/", "Ingresar");
+    private final static QName _IngresarResponse_QNAME = new QName("http://WebService/", "IngresarResponse");
     private final static QName _Listar_QNAME = new QName("http://WebService/", "Listar");
     private final static QName _ListarResponse_QNAME = new QName("http://WebService/", "ListarResponse");
     private final static QName _Agregar_QNAME = new QName("http://WebService/", "agregar");
@@ -72,6 +74,22 @@ public class ObjectFactory {
      */
     public EliminarResponse createEliminarResponse() {
         return new EliminarResponse();
+    }
+
+    /**
+     * Create an instance of {@link Ingresar }
+     * 
+     */
+    public Ingresar createIngresar() {
+        return new Ingresar();
+    }
+
+    /**
+     * Create an instance of {@link IngresarResponse }
+     * 
+     */
+    public IngresarResponse createIngresarResponse() {
+        return new IngresarResponse();
     }
 
     /**
@@ -164,6 +182,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://WebService/", name = "EliminarResponse")
     public JAXBElement<EliminarResponse> createEliminarResponse(EliminarResponse value) {
         return new JAXBElement<EliminarResponse>(_EliminarResponse_QNAME, EliminarResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Ingresar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "Ingresar")
+    public JAXBElement<Ingresar> createIngresar(Ingresar value) {
+        return new JAXBElement<Ingresar>(_Ingresar_QNAME, Ingresar.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link IngresarResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "IngresarResponse")
+    public JAXBElement<IngresarResponse> createIngresarResponse(IngresarResponse value) {
+        return new JAXBElement<IngresarResponse>(_IngresarResponse_QNAME, IngresarResponse.class, null, value);
     }
 
     /**

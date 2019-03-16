@@ -20,7 +20,7 @@
         <div class="container mt-4">
             <div class="card">
                 <div class="card-header">
-                    <a href="Controlador?accion=add" class="btn btn-success">Nuevo usuario</a>
+                    <h4>Tabla de Usuarios</h4>
                 </div>
                 <div class="card-body">
                     <table class="table table-hover">

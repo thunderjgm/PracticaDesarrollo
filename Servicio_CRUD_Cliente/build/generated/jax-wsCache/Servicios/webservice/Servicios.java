@@ -30,14 +30,14 @@ public interface Servicios {
      * @param password
      * @param user
      * @return
-     *     returns java.lang.String
+     *     returns boolean
      */
-    @WebMethod
+    @WebMethod(operationName = "Ingresar")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "agregar", targetNamespace = "http://WebService/", className = "webservice.Agregar")
-    @ResponseWrapper(localName = "agregarResponse", targetNamespace = "http://WebService/", className = "webservice.AgregarResponse")
-    @Action(input = "http://WebService/Servicios/agregarRequest", output = "http://WebService/Servicios/agregarResponse")
-    public String agregar(
+    @RequestWrapper(localName = "Ingresar", targetNamespace = "http://WebService/", className = "webservice.Ingresar")
+    @ResponseWrapper(localName = "IngresarResponse", targetNamespace = "http://WebService/", className = "webservice.IngresarResponse")
+    @Action(input = "http://WebService/Servicios/IngresarRequest", output = "http://WebService/Servicios/IngresarResponse")
+    public boolean ingresar(
         @WebParam(name = "user", targetNamespace = "")
         String user,
         @WebParam(name = "password", targetNamespace = "")
@@ -54,36 +54,6 @@ public interface Servicios {
     @ResponseWrapper(localName = "ListarResponse", targetNamespace = "http://WebService/", className = "webservice.ListarResponse")
     @Action(input = "http://WebService/Servicios/ListarRequest", output = "http://WebService/Servicios/ListarResponse")
     public List<User> listar();
-
-    /**
-     * 
-     * @param id
-     * @return
-     *     returns webservice.User
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarID", targetNamespace = "http://WebService/", className = "webservice.ListarID")
-    @ResponseWrapper(localName = "listarIDResponse", targetNamespace = "http://WebService/", className = "webservice.ListarIDResponse")
-    @Action(input = "http://WebService/Servicios/listarIDRequest", output = "http://WebService/Servicios/listarIDResponse")
-    public User listarID(
-        @WebParam(name = "id", targetNamespace = "")
-        int id);
-
-    /**
-     * 
-     * @param id
-     * @return
-     *     returns webservice.User
-     */
-    @WebMethod(operationName = "Eliminar")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Eliminar", targetNamespace = "http://WebService/", className = "webservice.Eliminar")
-    @ResponseWrapper(localName = "EliminarResponse", targetNamespace = "http://WebService/", className = "webservice.EliminarResponse")
-    @Action(input = "http://WebService/Servicios/EliminarRequest", output = "http://WebService/Servicios/EliminarResponse")
-    public User eliminar(
-        @WebParam(name = "id", targetNamespace = "")
-        int id);
 
     /**
      * 
@@ -105,5 +75,53 @@ public interface Servicios {
         String user,
         @WebParam(name = "password", targetNamespace = "")
         String password);
+
+    /**
+     * 
+     * @param password
+     * @param user
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "agregar", targetNamespace = "http://WebService/", className = "webservice.Agregar")
+    @ResponseWrapper(localName = "agregarResponse", targetNamespace = "http://WebService/", className = "webservice.AgregarResponse")
+    @Action(input = "http://WebService/Servicios/agregarRequest", output = "http://WebService/Servicios/agregarResponse")
+    public String agregar(
+        @WebParam(name = "user", targetNamespace = "")
+        String user,
+        @WebParam(name = "password", targetNamespace = "")
+        String password);
+
+    /**
+     * 
+     * @param id
+     * @return
+     *     returns webservice.User
+     */
+    @WebMethod(operationName = "Eliminar")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Eliminar", targetNamespace = "http://WebService/", className = "webservice.Eliminar")
+    @ResponseWrapper(localName = "EliminarResponse", targetNamespace = "http://WebService/", className = "webservice.EliminarResponse")
+    @Action(input = "http://WebService/Servicios/EliminarRequest", output = "http://WebService/Servicios/EliminarResponse")
+    public User eliminar(
+        @WebParam(name = "id", targetNamespace = "")
+        int id);
+
+    /**
+     * 
+     * @param id
+     * @return
+     *     returns webservice.User
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarID", targetNamespace = "http://WebService/", className = "webservice.ListarID")
+    @ResponseWrapper(localName = "listarIDResponse", targetNamespace = "http://WebService/", className = "webservice.ListarIDResponse")
+    @Action(input = "http://WebService/Servicios/listarIDRequest", output = "http://WebService/Servicios/listarIDResponse")
+    public User listarID(
+        @WebParam(name = "id", targetNamespace = "")
+        int id);
 
 }
