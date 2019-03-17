@@ -34,6 +34,7 @@ public class ObjectFactory {
     private final static QName _ListarResponse_QNAME = new QName("http://WebService/", "ListarResponse");
     private final static QName _Agregar_QNAME = new QName("http://WebService/", "agregar");
     private final static QName _AgregarResponse_QNAME = new QName("http://WebService/", "agregarResponse");
+    private final static QName _Cargar_QNAME = new QName("http://WebService/", "cargar");
     private final static QName _ListarID_QNAME = new QName("http://WebService/", "listarID");
     private final static QName _ListarIDResponse_QNAME = new QName("http://WebService/", "listarIDResponse");
 
@@ -122,6 +123,14 @@ public class ObjectFactory {
      */
     public AgregarResponse createAgregarResponse() {
         return new AgregarResponse();
+    }
+
+    /**
+     * Create an instance of {@link Cargar }
+     * 
+     */
+    public Cargar createCargar() {
+        return new Cargar();
     }
 
     /**
@@ -236,6 +245,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://WebService/", name = "agregarResponse")
     public JAXBElement<AgregarResponse> createAgregarResponse(AgregarResponse value) {
         return new JAXBElement<AgregarResponse>(_AgregarResponse_QNAME, AgregarResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Cargar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "cargar")
+    public JAXBElement<Cargar> createCargar(Cargar value) {
+        return new JAXBElement<Cargar>(_Cargar_QNAME, Cargar.class, null, value);
     }
 
     /**

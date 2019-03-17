@@ -11,23 +11,11 @@
 <message name="IngresarResponse">
 <part name="parameters" element="tns:IngresarResponse"/>
 </message>
-<message name="Listar">
-<part name="parameters" element="tns:Listar"/>
-</message>
-<message name="ListarResponse">
-<part name="parameters" element="tns:ListarResponse"/>
-</message>
 <message name="Actualizar">
 <part name="parameters" element="tns:Actualizar"/>
 </message>
 <message name="ActualizarResponse">
 <part name="parameters" element="tns:ActualizarResponse"/>
-</message>
-<message name="agregar">
-<part name="parameters" element="tns:agregar"/>
-</message>
-<message name="agregarResponse">
-<part name="parameters" element="tns:agregarResponse"/>
 </message>
 <message name="Eliminar">
 <part name="parameters" element="tns:Eliminar"/>
@@ -41,22 +29,29 @@
 <message name="listarIDResponse">
 <part name="parameters" element="tns:listarIDResponse"/>
 </message>
+<message name="agregar">
+<part name="parameters" element="tns:agregar"/>
+</message>
+<message name="agregarResponse">
+<part name="parameters" element="tns:agregarResponse"/>
+</message>
+<message name="Listar">
+<part name="parameters" element="tns:Listar"/>
+</message>
+<message name="ListarResponse">
+<part name="parameters" element="tns:ListarResponse"/>
+</message>
+<message name="cargar">
+<part name="parameters" element="tns:cargar"/>
+</message>
 <portType name="Servicios">
 <operation name="Ingresar">
 <input wsam:Action="http://WebService/Servicios/IngresarRequest" message="tns:Ingresar"/>
 <output wsam:Action="http://WebService/Servicios/IngresarResponse" message="tns:IngresarResponse"/>
 </operation>
-<operation name="Listar">
-<input wsam:Action="http://WebService/Servicios/ListarRequest" message="tns:Listar"/>
-<output wsam:Action="http://WebService/Servicios/ListarResponse" message="tns:ListarResponse"/>
-</operation>
 <operation name="Actualizar">
 <input wsam:Action="http://WebService/Servicios/ActualizarRequest" message="tns:Actualizar"/>
 <output wsam:Action="http://WebService/Servicios/ActualizarResponse" message="tns:ActualizarResponse"/>
-</operation>
-<operation name="agregar">
-<input wsam:Action="http://WebService/Servicios/agregarRequest" message="tns:agregar"/>
-<output wsam:Action="http://WebService/Servicios/agregarResponse" message="tns:agregarResponse"/>
 </operation>
 <operation name="Eliminar">
 <input wsam:Action="http://WebService/Servicios/EliminarRequest" message="tns:Eliminar"/>
@@ -65,6 +60,17 @@
 <operation name="listarID">
 <input wsam:Action="http://WebService/Servicios/listarIDRequest" message="tns:listarID"/>
 <output wsam:Action="http://WebService/Servicios/listarIDResponse" message="tns:listarIDResponse"/>
+</operation>
+<operation name="agregar">
+<input wsam:Action="http://WebService/Servicios/agregarRequest" message="tns:agregar"/>
+<output wsam:Action="http://WebService/Servicios/agregarResponse" message="tns:agregarResponse"/>
+</operation>
+<operation name="Listar">
+<input wsam:Action="http://WebService/Servicios/ListarRequest" message="tns:Listar"/>
+<output wsam:Action="http://WebService/Servicios/ListarResponse" message="tns:ListarResponse"/>
+</operation>
+<operation name="cargar">
+<input wsam:Action="http://WebService/Servicios/cargar" message="tns:cargar"/>
 </operation>
 </portType>
 <binding name="ServiciosPortBinding" type="tns:Servicios">
@@ -79,25 +85,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="Listar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="Actualizar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="agregar">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -123,6 +111,30 @@
 <output>
 <soap:body use="literal"/>
 </output>
+</operation>
+<operation name="agregar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Listar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="cargar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
 </operation>
 </binding>
 <service name="Servicios">

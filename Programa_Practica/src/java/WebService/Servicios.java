@@ -4,6 +4,7 @@ package WebService;
 import Modelo.User;
 import Modelo.UserDAO;
 import java.util.List;
+import javax.jws.Oneway;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -59,6 +60,15 @@ public class Servicios {
     public boolean Ingresar(@WebParam(name = "user") String user, @WebParam(name = "password") String password) {
         boolean datos= dao.ingresar(user, password);
         return datos;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "cargar")
+    @Oneway
+    public void cargar() {
+        dao.cargar();
     }
 
 

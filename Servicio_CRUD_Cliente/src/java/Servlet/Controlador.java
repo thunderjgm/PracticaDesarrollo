@@ -53,6 +53,11 @@ public class Controlador extends HttpServlet {
             user.actualizar(id, User, Password);
             acceso=index;
         }
+        else if(accion.equals("cargar")){
+            user.cargar();
+            acceso=index;
+        }
+        
         else if(accion.equals("Ingresar")){
             String User=request.getParameter("txtuser");
             String Password=request.getParameter("txtpassword");
@@ -65,8 +70,7 @@ public class Controlador extends HttpServlet {
                     acceso=index;
                 }else{
                     acceso=noroot;
-                }
-                
+                }             
                 
             }else{
                 acceso=login;

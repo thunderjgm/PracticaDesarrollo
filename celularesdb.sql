@@ -52,11 +52,11 @@ DROP TABLE IF EXISTS `login`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `login` (
-  `idlogin` int(11) NOT NULL,
+  `idlogin` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY (`idlogin`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +65,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'root','root'),(2,'admin','admin');
+INSERT INTO `login` VALUES (1,'Juan','123456'),(2,'root','root'),(3,'Pepe','marihuana'),(4,'Lol','Lol'),(5,'Fumando','Perica'),(6,'Sopla','Empanadas'),(7,'Ruso','Vodka'),(8,'Agua','Limon'),(9,'Perro','Sarnoso'),(10,'Gato','Ladron'),(11,'lol','1234');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,4 +127,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-14 12:24:59
+-- Dump completed on 2019-03-16 22:18:34

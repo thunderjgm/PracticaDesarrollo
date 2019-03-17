@@ -137,6 +137,30 @@ public class UserDAO implements CRUD{
 //        }
         return estado;
     }
+
+    @Override
+    public void cargar(){
+        String cleandb = "truncate table login";      
+        try{
+                con=conex.getConnection();
+                ps=con.prepareStatement(cleandb);
+                res=ps.executeUpdate();
+                
+            }catch(Exception e){
+            }
+        String LoadCSV = "LOAD DATA INFILE 'csv.csv'\n" +
+        "INTO TABLE login\n" +
+        "FIELDS TERMINATED BY ';'\n" +
+        "OPTIONALLY ENCLOSED BY '\"'\n" +
+        "LINES TERMINATED BY '\\r\\n'\n" +
+        "IGNORE 1 ROWS;";
+        try{
+                ps=con.prepareStatement(LoadCSV);
+                rs=ps.executeQuery();
+                
+            }catch(Exception e){
+            }            
+    }
     
     
     

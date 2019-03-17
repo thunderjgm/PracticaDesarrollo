@@ -20,9 +20,15 @@
 
 <xs:element name="agregarResponse" type="tns:agregarResponse"/>
 
+<xs:element name="cargar" type="tns:cargar"/>
+
 <xs:element name="listarID" type="tns:listarID"/>
 
 <xs:element name="listarIDResponse" type="tns:listarIDResponse"/>
+
+<xs:complexType name="cargar">
+<xs:sequence/>
+</xs:complexType>
 
 <xs:complexType name="agregar">
 <xs:sequence>

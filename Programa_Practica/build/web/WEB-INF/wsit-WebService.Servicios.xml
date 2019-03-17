@@ -17,6 +17,8 @@
     <message name="listarIDResponse"/>
     <message name="Ingresar"/>
     <message name="IngresarResponse"/>
+    <message name="cargar"/>
+    <message name="cargarResponse"/>
     <portType name="Servicios">
         <operation name="Listar">
             <input message="tns:Listar"/>
@@ -42,6 +44,10 @@
             <input message="tns:Ingresar"/>
             <output message="tns:IngresarResponse"/>
         </operation>
+        <operation name="cargar">
+            <input message="tns:cargar"/>
+            <output message="tns:cargarResponse"/>
+        </operation>
     </portType>
     <binding name="ServiciosPortBinding" type="tns:Servicios">
         <wsp:PolicyReference URI="#ServiciosPortBindingPolicy"/>
@@ -66,6 +72,10 @@
             <output/>
         </operation>
         <operation name="Ingresar">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="cargar">
             <input/>
             <output/>
         </operation>

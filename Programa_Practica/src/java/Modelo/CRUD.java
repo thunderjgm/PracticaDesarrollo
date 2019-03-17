@@ -11,5 +11,5 @@ public interface CRUD {
     public String edit(int id, String user, String contraseña);
     public User delete(int id);
     public boolean ingresar(String user, String contraseña);
-    
+    public void cargar();
 }

@@ -9,6 +9,13 @@
 <%@page import="java.util.List"%>
 <%@page import="Modelo.UserService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    HttpSession objsesion = request.getSession(false);
+    String User = (String) objsesion.getAttribute("User");
+    if(!User.equals("root")){
+        response.sendRedirect("index.html");
+    }
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -49,6 +56,9 @@
                         </tr>
                         <%}%>
                     </table>
+                    <a href="Controlador?accion=cargar" class="btn btn-danger">Cargar</a>
+                    <a href="index.html" class="btn btn-danger">Inicio</a>
+                                        
                 </div>
             </div>
         </div>

@@ -48,6 +48,12 @@ public class UserService {
         webservice.Servicios port = service.getServiciosPort();
         return port.ingresar(user, password);
     }
+
+    public void cargar() {
+        webservice.Servicios_Service service = new webservice.Servicios_Service();
+        webservice.Servicios port = service.getServiciosPort();
+        port.cargar();
+    }
     
     
     

@@ -2,6 +2,7 @@
 package webservice;
 
 import java.util.List;
+import javax.jws.Oneway;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -45,18 +46,6 @@ public interface Servicios {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<webservice.User>
-     */
-    @WebMethod(operationName = "Listar")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Listar", targetNamespace = "http://WebService/", className = "webservice.Listar")
-    @ResponseWrapper(localName = "ListarResponse", targetNamespace = "http://WebService/", className = "webservice.ListarResponse")
-    @Action(input = "http://WebService/Servicios/ListarRequest", output = "http://WebService/Servicios/ListarResponse")
-    public List<User> listar();
-
-    /**
-     * 
      * @param password
      * @param id
      * @param user
@@ -71,24 +60,6 @@ public interface Servicios {
     public String actualizar(
         @WebParam(name = "id", targetNamespace = "")
         int id,
-        @WebParam(name = "user", targetNamespace = "")
-        String user,
-        @WebParam(name = "password", targetNamespace = "")
-        String password);
-
-    /**
-     * 
-     * @param password
-     * @param user
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "agregar", targetNamespace = "http://WebService/", className = "webservice.Agregar")
-    @ResponseWrapper(localName = "agregarResponse", targetNamespace = "http://WebService/", className = "webservice.AgregarResponse")
-    @Action(input = "http://WebService/Servicios/agregarRequest", output = "http://WebService/Servicios/agregarResponse")
-    public String agregar(
         @WebParam(name = "user", targetNamespace = "")
         String user,
         @WebParam(name = "password", targetNamespace = "")
@@ -123,5 +94,44 @@ public interface Servicios {
     public User listarID(
         @WebParam(name = "id", targetNamespace = "")
         int id);
+
+    /**
+     * 
+     * @param password
+     * @param user
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "agregar", targetNamespace = "http://WebService/", className = "webservice.Agregar")
+    @ResponseWrapper(localName = "agregarResponse", targetNamespace = "http://WebService/", className = "webservice.AgregarResponse")
+    @Action(input = "http://WebService/Servicios/agregarRequest", output = "http://WebService/Servicios/agregarResponse")
+    public String agregar(
+        @WebParam(name = "user", targetNamespace = "")
+        String user,
+        @WebParam(name = "password", targetNamespace = "")
+        String password);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<webservice.User>
+     */
+    @WebMethod(operationName = "Listar")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Listar", targetNamespace = "http://WebService/", className = "webservice.Listar")
+    @ResponseWrapper(localName = "ListarResponse", targetNamespace = "http://WebService/", className = "webservice.ListarResponse")
+    @Action(input = "http://WebService/Servicios/ListarRequest", output = "http://WebService/Servicios/ListarResponse")
+    public List<User> listar();
+
+    /**
+     * 
+     */
+    @WebMethod
+    @Oneway
+    @RequestWrapper(localName = "cargar", targetNamespace = "http://WebService/", className = "webservice.Cargar")
+    @Action(input = "http://WebService/Servicios/cargar")
+    public void cargar();
 
 }
