@@ -1,7 +1,13 @@
 <%-- 
     Document   : validacion
     Created on : 15/03/2019, 07:53:17 PM
-    Author     : user
+    Author     :  -Juan José Giraldo
+                  -Santiago Villegas
+                  -Robinson Sanchez
+                  -Mariana Gómez
+Acá se desarrolla la parte de validación (HTML), todos los .jsp se
+consideran como el FRONT-END de la aplicación; por tanto no encontraremos
+mucho codigo de conección, simplemente lenguaje de etiquetado
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -21,7 +27,7 @@
                    <h5>Iniciar sesión</h5>
                 </div>
                 <div class="card-body">
-                    <form action="Controlador">
+                    <form action="Controlador" method="post">
                         <label>Usuario</label>
                             <input type="text" name="txtuser" class="form-control">
                         <label>Contraseña</label>

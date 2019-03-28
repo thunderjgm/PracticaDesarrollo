@@ -7,6 +7,8 @@ public interface CRUD {
     
     public List listar();
     public User listarID(int id);
+    public List listarM();
+    public Movil listarIDM(int idMarca);
     public String add(String user, String contraseña);
     public String edit(int id, String user, String contraseña);
     public User delete(int id);

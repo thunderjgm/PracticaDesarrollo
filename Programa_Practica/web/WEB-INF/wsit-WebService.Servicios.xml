@@ -5,80 +5,9 @@
  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Servicios" targetNamespace="http://WebService/" xmlns:tns="http://WebService/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" 
  >
-    <message name="Listar"/>
-    <message name="ListarResponse"/>
-    <message name="agregar"/>
-    <message name="agregarResponse"/>
-    <message name="Actualizar"/>
-    <message name="ActualizarResponse"/>
-    <message name="Eliminar"/>
-    <message name="EliminarResponse"/>
-    <message name="listarID"/>
-    <message name="listarIDResponse"/>
-    <message name="Ingresar"/>
-    <message name="IngresarResponse"/>
-    <message name="cargar"/>
-    <message name="cargarResponse"/>
-    <portType name="Servicios">
-        <operation name="Listar">
-            <input message="tns:Listar"/>
-            <output message="tns:ListarResponse"/>
-        </operation>
-        <operation name="agregar">
-            <input message="tns:agregar"/>
-            <output message="tns:agregarResponse"/>
-        </operation>
-        <operation name="Actualizar">
-            <input message="tns:Actualizar"/>
-            <output message="tns:ActualizarResponse"/>
-        </operation>
-        <operation name="Eliminar">
-            <input message="tns:Eliminar"/>
-            <output message="tns:EliminarResponse"/>
-        </operation>
-        <operation name="listarID">
-            <input message="tns:listarID"/>
-            <output message="tns:listarIDResponse"/>
-        </operation>
-        <operation name="Ingresar">
-            <input message="tns:Ingresar"/>
-            <output message="tns:IngresarResponse"/>
-        </operation>
-        <operation name="cargar">
-            <input message="tns:cargar"/>
-            <output message="tns:cargarResponse"/>
-        </operation>
-    </portType>
+    <portType name="Servicios"></portType>
     <binding name="ServiciosPortBinding" type="tns:Servicios">
         <wsp:PolicyReference URI="#ServiciosPortBindingPolicy"/>
-        <operation name="Listar">
-            <input/>
-            <output/>
-        </operation>
-        <operation name="agregar">
-            <input/>
-            <output/>
-        </operation>
-        <operation name="Actualizar">
-            <input/>
-            <output/>
-        </operation>
-        <operation name="Eliminar">
-            <input/>
-            <output/>
-        </operation>
-        <operation name="listarID">
-            <input/>
-            <output/>
-        </operation>
-        <operation name="Ingresar">
-            <input/>
-            <output/>
-        </operation>
-        <operation name="cargar">
-            <input/>
-            <output/>
-        </operation>
     </binding>
     <service name="Servicios">
         <port name="ServiciosPort" binding="tns:ServiciosPortBinding"/>
@@ -117,8 +46,10 @@
             <wsp:All>
                 <sp:EncryptedParts>
                     <sp:Body/>
+                    <sp:Body/>
                 </sp:EncryptedParts>
                 <sp:SignedParts>
+                    <sp:Body/>
                     <sp:Body/>
                 </sp:SignedParts>
             </wsp:All>
@@ -129,8 +60,10 @@
             <wsp:All>
                 <sp:EncryptedParts>
                     <sp:Body/>
+                    <sp:Body/>
                 </sp:EncryptedParts>
                 <sp:SignedParts>
+                    <sp:Body/>
                     <sp:Body/>
                 </sp:SignedParts>
             </wsp:All>
@@ -159,6 +92,150 @@
                 </sp:EncryptedParts>
                 <sp:SignedParts>
                     <sp:Body/>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_listarID_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_listarID_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_Eliminar_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_Eliminar_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_Listar_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_Listar_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_Ingresar_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_Ingresar_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_Actualizar_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_Actualizar_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_cargar_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ServiciosPortBinding_cargar_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
                     <sp:Body/>
                 </sp:SignedParts>
             </wsp:All>

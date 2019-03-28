@@ -1,7 +1,13 @@
 <%-- 
     Document   : add
     Created on : 13/03/2019, 10:13:20 PM
-    Author     : user
+    Author     : -Juan José Giraldo
+                  -Santiago Villegas
+                  -Robinson Sanchez
+                  -Mariana Gómez
+
+Acá es donde se desarrolla la parte de agregar un ususario nuevo
+se hace uso de etiquetas HTML, BOOTSTRAP (diseño)
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -24,49 +24,29 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Actualizar_QNAME = new QName("http://WebService/", "Actualizar");
-    private final static QName _ActualizarResponse_QNAME = new QName("http://WebService/", "ActualizarResponse");
-    private final static QName _Eliminar_QNAME = new QName("http://WebService/", "Eliminar");
-    private final static QName _EliminarResponse_QNAME = new QName("http://WebService/", "EliminarResponse");
-    private final static QName _Ingresar_QNAME = new QName("http://WebService/", "Ingresar");
-    private final static QName _IngresarResponse_QNAME = new QName("http://WebService/", "IngresarResponse");
-    private final static QName _Listar_QNAME = new QName("http://WebService/", "Listar");
-    private final static QName _ListarResponse_QNAME = new QName("http://WebService/", "ListarResponse");
-    private final static QName _Agregar_QNAME = new QName("http://WebService/", "agregar");
-    private final static QName _AgregarResponse_QNAME = new QName("http://WebService/", "agregarResponse");
-    private final static QName _Cargar_QNAME = new QName("http://WebService/", "cargar");
-    private final static QName _ListarID_QNAME = new QName("http://WebService/", "listarID");
+    private final static QName _ListarM_QNAME = new QName("http://WebService/", "ListarM");
     private final static QName _ListarIDResponse_QNAME = new QName("http://WebService/", "listarIDResponse");
+    private final static QName _Agregar_QNAME = new QName("http://WebService/", "agregar");
+    private final static QName _ListarMResponse_QNAME = new QName("http://WebService/", "ListarMResponse");
+    private final static QName _ListarIDMarca_QNAME = new QName("http://WebService/", "listarIDMarca");
+    private final static QName _ListarIDMarcaResponse_QNAME = new QName("http://WebService/", "listarIDMarcaResponse");
+    private final static QName _Listar_QNAME = new QName("http://WebService/", "Listar");
+    private final static QName _EliminarResponse_QNAME = new QName("http://WebService/", "EliminarResponse");
+    private final static QName _Cargar_QNAME = new QName("http://WebService/", "cargar");
+    private final static QName _Actualizar_QNAME = new QName("http://WebService/", "Actualizar");
+    private final static QName _IngresarResponse_QNAME = new QName("http://WebService/", "IngresarResponse");
+    private final static QName _ActualizarResponse_QNAME = new QName("http://WebService/", "ActualizarResponse");
+    private final static QName _Ingresar_QNAME = new QName("http://WebService/", "Ingresar");
+    private final static QName _ListarResponse_QNAME = new QName("http://WebService/", "ListarResponse");
+    private final static QName _Eliminar_QNAME = new QName("http://WebService/", "Eliminar");
+    private final static QName _AgregarResponse_QNAME = new QName("http://WebService/", "agregarResponse");
+    private final static QName _ListarID_QNAME = new QName("http://WebService/", "listarID");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: webservice
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link Actualizar }
-     * 
-     */
-    public Actualizar createActualizar() {
-        return new Actualizar();
-    }
-
-    /**
-     * Create an instance of {@link ActualizarResponse }
-     * 
-     */
-    public ActualizarResponse createActualizarResponse() {
-        return new ActualizarResponse();
-    }
-
-    /**
-     * Create an instance of {@link Eliminar }
-     * 
-     */
-    public Eliminar createEliminar() {
-        return new Eliminar();
     }
 
     /**
@@ -78,22 +58,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Ingresar }
-     * 
-     */
-    public Ingresar createIngresar() {
-        return new Ingresar();
-    }
-
-    /**
-     * Create an instance of {@link IngresarResponse }
-     * 
-     */
-    public IngresarResponse createIngresarResponse() {
-        return new IngresarResponse();
-    }
-
-    /**
      * Create an instance of {@link Listar }
      * 
      */
@@ -102,11 +66,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListarResponse }
+     * Create an instance of {@link ListarIDMarcaResponse }
      * 
      */
-    public ListarResponse createListarResponse() {
-        return new ListarResponse();
+    public ListarIDMarcaResponse createListarIDMarcaResponse() {
+        return new ListarIDMarcaResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarIDMarca }
+     * 
+     */
+    public ListarIDMarca createListarIDMarca() {
+        return new ListarIDMarca();
+    }
+
+    /**
+     * Create an instance of {@link ListarMResponse }
+     * 
+     */
+    public ListarMResponse createListarMResponse() {
+        return new ListarMResponse();
     }
 
     /**
@@ -118,19 +98,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AgregarResponse }
+     * Create an instance of {@link ListarIDResponse }
      * 
      */
-    public AgregarResponse createAgregarResponse() {
-        return new AgregarResponse();
+    public ListarIDResponse createListarIDResponse() {
+        return new ListarIDResponse();
     }
 
     /**
-     * Create an instance of {@link Cargar }
+     * Create an instance of {@link ListarM }
      * 
      */
-    public Cargar createCargar() {
-        return new Cargar();
+    public ListarM createListarM() {
+        return new ListarM();
     }
 
     /**
@@ -142,11 +122,75 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListarIDResponse }
+     * Create an instance of {@link Eliminar }
      * 
      */
-    public ListarIDResponse createListarIDResponse() {
-        return new ListarIDResponse();
+    public Eliminar createEliminar() {
+        return new Eliminar();
+    }
+
+    /**
+     * Create an instance of {@link AgregarResponse }
+     * 
+     */
+    public AgregarResponse createAgregarResponse() {
+        return new AgregarResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarResponse }
+     * 
+     */
+    public ListarResponse createListarResponse() {
+        return new ListarResponse();
+    }
+
+    /**
+     * Create an instance of {@link Ingresar }
+     * 
+     */
+    public Ingresar createIngresar() {
+        return new Ingresar();
+    }
+
+    /**
+     * Create an instance of {@link ActualizarResponse }
+     * 
+     */
+    public ActualizarResponse createActualizarResponse() {
+        return new ActualizarResponse();
+    }
+
+    /**
+     * Create an instance of {@link IngresarResponse }
+     * 
+     */
+    public IngresarResponse createIngresarResponse() {
+        return new IngresarResponse();
+    }
+
+    /**
+     * Create an instance of {@link Actualizar }
+     * 
+     */
+    public Actualizar createActualizar() {
+        return new Actualizar();
+    }
+
+    /**
+     * Create an instance of {@link Cargar }
+     * 
+     */
+    public Cargar createCargar() {
+        return new Cargar();
+    }
+
+    /**
+     * Create an instance of {@link Movil }
+     * 
+     */
+    public Movil createMovil() {
+        return new Movil();
     }
 
     /**
@@ -158,75 +202,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Actualizar }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarM }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://WebService/", name = "Actualizar")
-    public JAXBElement<Actualizar> createActualizar(Actualizar value) {
-        return new JAXBElement<Actualizar>(_Actualizar_QNAME, Actualizar.class, null, value);
+    @XmlElementDecl(namespace = "http://WebService/", name = "ListarM")
+    public JAXBElement<ListarM> createListarM(ListarM value) {
+        return new JAXBElement<ListarM>(_ListarM_QNAME, ListarM.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ActualizarResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarIDResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://WebService/", name = "ActualizarResponse")
-    public JAXBElement<ActualizarResponse> createActualizarResponse(ActualizarResponse value) {
-        return new JAXBElement<ActualizarResponse>(_ActualizarResponse_QNAME, ActualizarResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Eliminar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://WebService/", name = "Eliminar")
-    public JAXBElement<Eliminar> createEliminar(Eliminar value) {
-        return new JAXBElement<Eliminar>(_Eliminar_QNAME, Eliminar.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://WebService/", name = "EliminarResponse")
-    public JAXBElement<EliminarResponse> createEliminarResponse(EliminarResponse value) {
-        return new JAXBElement<EliminarResponse>(_EliminarResponse_QNAME, EliminarResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Ingresar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://WebService/", name = "Ingresar")
-    public JAXBElement<Ingresar> createIngresar(Ingresar value) {
-        return new JAXBElement<Ingresar>(_Ingresar_QNAME, Ingresar.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link IngresarResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://WebService/", name = "IngresarResponse")
-    public JAXBElement<IngresarResponse> createIngresarResponse(IngresarResponse value) {
-        return new JAXBElement<IngresarResponse>(_IngresarResponse_QNAME, IngresarResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Listar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://WebService/", name = "Listar")
-    public JAXBElement<Listar> createListar(Listar value) {
-        return new JAXBElement<Listar>(_Listar_QNAME, Listar.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://WebService/", name = "ListarResponse")
-    public JAXBElement<ListarResponse> createListarResponse(ListarResponse value) {
-        return new JAXBElement<ListarResponse>(_ListarResponse_QNAME, ListarResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://WebService/", name = "listarIDResponse")
+    public JAXBElement<ListarIDResponse> createListarIDResponse(ListarIDResponse value) {
+        return new JAXBElement<ListarIDResponse>(_ListarIDResponse_QNAME, ListarIDResponse.class, null, value);
     }
 
     /**
@@ -239,12 +229,48 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AgregarResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarMResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://WebService/", name = "agregarResponse")
-    public JAXBElement<AgregarResponse> createAgregarResponse(AgregarResponse value) {
-        return new JAXBElement<AgregarResponse>(_AgregarResponse_QNAME, AgregarResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://WebService/", name = "ListarMResponse")
+    public JAXBElement<ListarMResponse> createListarMResponse(ListarMResponse value) {
+        return new JAXBElement<ListarMResponse>(_ListarMResponse_QNAME, ListarMResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarIDMarca }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "listarIDMarca")
+    public JAXBElement<ListarIDMarca> createListarIDMarca(ListarIDMarca value) {
+        return new JAXBElement<ListarIDMarca>(_ListarIDMarca_QNAME, ListarIDMarca.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarIDMarcaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "listarIDMarcaResponse")
+    public JAXBElement<ListarIDMarcaResponse> createListarIDMarcaResponse(ListarIDMarcaResponse value) {
+        return new JAXBElement<ListarIDMarcaResponse>(_ListarIDMarcaResponse_QNAME, ListarIDMarcaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Listar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "Listar")
+    public JAXBElement<Listar> createListar(Listar value) {
+        return new JAXBElement<Listar>(_Listar_QNAME, Listar.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "EliminarResponse")
+    public JAXBElement<EliminarResponse> createEliminarResponse(EliminarResponse value) {
+        return new JAXBElement<EliminarResponse>(_EliminarResponse_QNAME, EliminarResponse.class, null, value);
     }
 
     /**
@@ -257,21 +283,75 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Actualizar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "Actualizar")
+    public JAXBElement<Actualizar> createActualizar(Actualizar value) {
+        return new JAXBElement<Actualizar>(_Actualizar_QNAME, Actualizar.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link IngresarResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "IngresarResponse")
+    public JAXBElement<IngresarResponse> createIngresarResponse(IngresarResponse value) {
+        return new JAXBElement<IngresarResponse>(_IngresarResponse_QNAME, IngresarResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ActualizarResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "ActualizarResponse")
+    public JAXBElement<ActualizarResponse> createActualizarResponse(ActualizarResponse value) {
+        return new JAXBElement<ActualizarResponse>(_ActualizarResponse_QNAME, ActualizarResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Ingresar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "Ingresar")
+    public JAXBElement<Ingresar> createIngresar(Ingresar value) {
+        return new JAXBElement<Ingresar>(_Ingresar_QNAME, Ingresar.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "ListarResponse")
+    public JAXBElement<ListarResponse> createListarResponse(ListarResponse value) {
+        return new JAXBElement<ListarResponse>(_ListarResponse_QNAME, ListarResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Eliminar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "Eliminar")
+    public JAXBElement<Eliminar> createEliminar(Eliminar value) {
+        return new JAXBElement<Eliminar>(_Eliminar_QNAME, Eliminar.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AgregarResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "agregarResponse")
+    public JAXBElement<AgregarResponse> createAgregarResponse(AgregarResponse value) {
+        return new JAXBElement<AgregarResponse>(_AgregarResponse_QNAME, AgregarResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ListarID }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://WebService/", name = "listarID")
     public JAXBElement<ListarID> createListarID(ListarID value) {
         return new JAXBElement<ListarID>(_ListarID_QNAME, ListarID.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarIDResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://WebService/", name = "listarIDResponse")
-    public JAXBElement<ListarIDResponse> createListarIDResponse(ListarIDResponse value) {
-        return new JAXBElement<ListarIDResponse>(_ListarIDResponse_QNAME, ListarIDResponse.class, null, value);
     }
 
 }

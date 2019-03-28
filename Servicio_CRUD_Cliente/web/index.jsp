@@ -57,6 +57,7 @@
                         <%}%>
                     </table>
                     <a href="Controlador?accion=cargar" class="btn btn-danger">Cargar</a>
+                    <a href="Controlador?accion=mostrar" class="btn btn-danger">Celulares</a> 
                     <a href="index.html" class="btn btn-danger">Inicio</a>
                                         
                 </div>

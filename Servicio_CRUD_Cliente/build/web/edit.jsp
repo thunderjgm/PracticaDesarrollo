@@ -1,7 +1,10 @@
 <%-- 
     Document   : edit
     Created on : 15/03/2019, 12:23:54 AM
-    Author     : Juan Jose
+    Author     : -Juan José Giraldo
+                  -Santiago Villegas
+                  -Robinson Sanchez
+                  -Mariana Gómez
 --%>
 
 <%@page import="webservice.User"%>

@@ -3,6 +3,8 @@ package WebService;
 
 import Modelo.User;
 import Modelo.UserDAO;
+import Modelo.Movil;
+import Modelo.MovilDAO;
 import java.util.List;
 import javax.jws.Oneway;
 import javax.jws.WebService;
@@ -12,7 +14,7 @@ import javax.jws.WebParam;
 @WebService(serviceName = "Servicios")
 public class Servicios {
     UserDAO dao=new UserDAO();
-    
+    MovilDAO daoM = new MovilDAO();    
     
     @WebMethod(operationName = "Listar")
     public List<User> listar() {
@@ -20,6 +22,18 @@ public class Servicios {
         return datos;
     }
     
+    @WebMethod(operationName = "ListarM")
+    public List<Movil> listarM() {
+        List datosM=daoM.listarM();
+        return datosM;
+    }
+    
+    @WebMethod(operationName = "listarIDMarca")
+    public Movil listarIDM(@WebParam(name = "id") int idMarca) {
+        Movil movil=daoM.listarIDM(idMarca);
+        return movil;
+    }
+        
     @WebMethod(operationName = "agregar")
     public String agregar(@WebParam(name = "user") String user, @WebParam(name = "password") String password) {
         String datos=dao.add(user, password);

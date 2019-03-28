@@ -3,15 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Juan%20Jose/Documents/NetBeansProjects/WEB_1/Servicio_CRUD_Cliente/src/java/Modelo/UserService.java</file>
-            <file>file:/C:/Users/Juan%20Jose/Documents/NetBeansProjects/WEB_1/Servicio_CRUD_Cliente/web/index.jsp</file>
-            <file>file:/C:/Users/Juan%20Jose/Documents/NetBeansProjects/WEB_1/Servicio_CRUD_Cliente/web/main.js</file>
-            <file>file:/C:/Users/Juan%20Jose/Documents/NetBeansProjects/WEB_1/Servicio_CRUD_Cliente/web/index.html</file>
-            <file>file:/C:/Users/Juan%20Jose/Documents/NetBeansProjects/WEB_1/Servicio_CRUD_Cliente/web/app.js</file>
-            <file>file:/C:/Users/Juan%20Jose/Documents/NetBeansProjects/WEB_1/Servicio_CRUD_Cliente/web/edit.jsp</file>
-            <file>file:/C:/Users/Juan%20Jose/Documents/NetBeansProjects/WEB_1/Servicio_CRUD_Cliente/web/main.css</file>
-            <file>file:/C:/Users/Juan%20Jose/Documents/NetBeansProjects/WEB_1/Servicio_CRUD_Cliente/web/add.jsp</file>
-            <file>file:/C:/Users/Juan%20Jose/Documents/NetBeansProjects/WEB_1/Servicio_CRUD_Cliente/src/java/Servlet/Controlador.java</file>
+            <file>file:/D:/desarrollomejora/PracticaDesarrollo-master/Servicio_CRUD_Cliente/src/java/Modelo/UserService.java</file>
+            <file>file:/D:/desarrollomejora/PracticaDesarrollo-master/Servicio_CRUD_Cliente/web/index.jsp</file>
+            <file>file:/D:/desarrollomejora/PracticaDesarrollo-master/Servicio_CRUD_Cliente/web/validacion.jsp</file>
+            <file>file:/D:/desarrollomejora/PracticaDesarrollo-master/Servicio_CRUD_Cliente/web/index_movil2.jsp</file>
+            <file>file:/D:/desarrollomejora/PracticaDesarrollo-master/Servicio_CRUD_Cliente/web/index.html</file>
+            <file>file:/D:/desarrollomejora/PracticaDesarrollo-master/Servicio_CRUD_Cliente/web/index_movil.jsp</file>
+            <file>file:/D:/desarrollomejora/PracticaDesarrollo-master/Servicio_CRUD_Cliente/src/java/Modelo/MovilService.java</file>
+            <file>file:/D:/desarrollomejora/PracticaDesarrollo-master/Servicio_CRUD_Cliente/src/java/Servlet/Controlador.java</file>
         </group>
     </open-files>
 </project-private>

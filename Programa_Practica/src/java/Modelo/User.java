@@ -6,43 +6,41 @@
 package Modelo;
 
 public class User {
-    int IDUser;
-    String User;
-    String Password;
+    private int idUser;
+    private String user;
+    private String password;
     
     public User(){
     }
 
-    public User(int IDUser, String User, String Password) {
-        this.IDUser = IDUser;
-        this.User = User;
-        this.Password = Password;
+    public User(int idUser, String user, String password) {
+        this.idUser = idUser;
+        this.user = user;
+        this.password = password;
     }
 
-    public int getIDUser() {
-        return IDUser;
+    public int getIdUser() {
+        return idUser;
     }
 
-    public void setIDUser(int IDUser) {
-        this.IDUser = IDUser;
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 
     public String getUser() {
-        return User;
+        return user;
     }
 
-    public void setUser(String User) {
-        this.User = User;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
-    public void setPassword(String Password) {
-        this.Password = Password;
-    }
-    
-    
+    public void setPassword(String password) {
+        this.password = password;
+    }    
     
 }

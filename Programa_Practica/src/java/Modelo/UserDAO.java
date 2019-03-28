@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ La aplicación WEB que se desarrolló está basada en servicios WEB. Esta aplicación cuenta con 2 roles, administrados y usuario.
+ El administrador puede realizar todos los servicios prestados por el CRUD de la aplicación.
  */
 package Modelo;
 
@@ -13,13 +12,13 @@ import java.util.List;
 
 public class UserDAO implements CRUD{
 
-    PreparedStatement ps;
-    ResultSet rs;
-    Connection con;
-    Conexion conex=new Conexion();
-    int res;
-    String msj;
-    boolean estado;
+    private PreparedStatement ps;
+    private ResultSet rs;
+    private Connection con;
+    private Conexion conex=new Conexion();
+    private int res;
+    private String msj;
+    private boolean estado;
     User user= new User();
     
     @Override
@@ -33,7 +32,7 @@ public class UserDAO implements CRUD{
                 while(rs.next()){
                     
                     User u=new User();
-                    u.setIDUser(rs.getInt("idlogin"));
+                    u.setIdUser(rs.getInt("idlogin"));
                     u.setUser(rs.getString("user"));
                     u.setPassword(rs.getString("password"));
                     datos.add(u);
@@ -52,7 +51,7 @@ public class UserDAO implements CRUD{
                 rs=ps.executeQuery();
                 while(rs.next()){
 
-                    user.setIDUser(rs.getInt("idlogin"));
+                    user.setIdUser(rs.getInt("idlogin"));
                     user.setUser(rs.getString("user"));
                     user.setPassword(rs.getString("password"));
                 }
@@ -160,6 +159,31 @@ public class UserDAO implements CRUD{
                 
             }catch(Exception e){
             }            
+    }
+
+    @Override
+    public List listarM() {
+        List<Movil> datos=new ArrayList<>();
+        String sql="select * from marca";
+            try{
+                con=conex.getConnection();
+                ps=con.prepareStatement(sql);
+                rs=ps.executeQuery();
+                while(rs.next()){
+                    
+                    Movil m=new Movil();
+                    m.setIdMarca(rs.getInt("idmarca"));
+                    m.setNombre(rs.getString("nombre"));                    
+                    datos.add(m);
+                }
+            }catch(Exception e){
+            }
+            return datos;
+    }
+
+    @Override
+    public Movil listarIDM(int idMarca) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

@@ -2,6 +2,7 @@
 package Servlet;
 
 import Modelo.UserService;
+import Modelo.MovilService;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -13,15 +14,17 @@ import javax.servlet.http.HttpSession;
 
 public class Controlador extends HttpServlet {
 
-        String add = "add.jsp";
-        String edit="edit.jsp";
-        String index="index.jsp";
-        String entra="menu.jsp";
-        String noroot="index_user.jsp";
-        String login="validacion.jsp";
-        String acceso="";
+        private String add = "add.jsp";
+        private String edit="edit.jsp";
+        private String index="index.jsp";
+        private String entra="menu.jsp";
+        private String noroot="index_movil2.jsp";
+        private String login="validacion.jsp";
+        private String celulares="index_movil.jsp";
+        private String acceso="";
     
         UserService user=new UserService();
+        MovilService movil=new MovilService();
         
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -36,6 +39,7 @@ public class Controlador extends HttpServlet {
             user.eliminar(id);
             acceso=index;
         }
+        
         else if(accion.equals("Guardar")){
             String User=request.getParameter("txtuser");
             String Password=request.getParameter("txtpassword");
@@ -56,6 +60,10 @@ public class Controlador extends HttpServlet {
         else if(accion.equals("cargar")){
             user.cargar();
             acceso=index;
+        }
+        
+        else if(accion.equalsIgnoreCase("mostrar")){
+            acceso=celulares;
         }
         
         else if(accion.equals("Ingresar")){
